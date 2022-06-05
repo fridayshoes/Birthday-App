@@ -11,7 +11,10 @@ class Birthday < Sinatra::Base
   end
 
   post '/birthday_form_result' do
-    "Hello World"
+    @username = params[:username]
+    @day_number = params[:day_number]
+    @month = params[:month]
+    erb :birthday_form_result
   end
 
   # start the server if ruby file executed directly
